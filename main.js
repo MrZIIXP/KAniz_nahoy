@@ -62,10 +62,10 @@ function spinSlot() {
   const result = Array.from({length: 3}, () => symbols[Math.floor(Math.random() * symbols.length)]);
   document.getElementById("slot-grid").innerHTML = result.map(s => `<div>${s}</div>`).join('');
   let multiplier = 0;
-  if (result.every(s => s === '7')) multiplier = 2;
-  else if (result.every(s => s === '💎')) multiplier = 1.5;
-  else if (result.every(s => s === '🍒')) multiplier = 1.2;
-  else if (result.every(s => s === '🍋')) multiplier = 1;
+  if (result.every(s => s === '7')) multiplier = 7;
+  else if (result.every(s => s === '💎')) multiplier = 3;
+  else if (result.every(s => s === '🍒')) multiplier = 2;
+  else if (result.every(s => s === '🍋')) multiplier = 1.5;
   wonAmount = currentBet * multiplier;
   if (multiplier > 0) {
     alert(`Вы выиграли: ${wonAmount.toFixed(2)}!`);
