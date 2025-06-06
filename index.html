@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Казино</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body onload="initCasino()">
+		<h1>Казино</h1>
+
+		<div id="top-bar">
+			<div id="total">Итог: 0</div>
+			<div id="current-bet">Ставка: 0</div>
+			<div id="debt" style="display: none; color: red">Долг: 0$</div>
+		</div>
+
+		<div class="button-bar">
+			<button id="bet-button" onclick="placeBet()">Сделать ставку</button>
+			<button id="finish-button" onclick="finishBet()">Завершить ставку</button>
+			<button id="add-balance" onclick="addBalance()">
+				Добавить на баланс
+			</button>
+		</div>
+
+		<div class="game-section">
+			<h2>Слоты</h2>
+			<div id="slot-grid"></div>
+			<button id="slot-button" onclick="spinSlot()">Крутить слоты</button>
+		</div>
+
+		<div class="game-section">
+			<h2>Рулетка</h2>
+			<div id="roulette-result">Результат: -</div>
+			<button id="roulette-button" onclick="spinRoulette()">
+				Крутить рулетку
+			</button>
+		</div>
+
+		<div class="game-section">
+			<h2>Кости</h2>
+			<div id="dice-result">Результат: -</div>
+			<button id="dice-button" onclick="rollDice()">Бросить кости</button>
+		</div>
+
+		<script src="main.js"></script>
+	</body>
+</html>
